@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0f172a;
+      background-image: radial-gradient(circle at 50% 0%, #1e293b 0%, #0f172a 100%);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      -webkit-font-smoothing: antialiased;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    h1 {
+      text-align: center;
+      margin: 0 0 28px 0;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: #f8fafc;
+    }
+
+    /* Strict 2x2 Grid Layout */
+    .grid {
+      width: 100%;
+      max-width: 500px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1.3 / 1; /* Maintains proportional shape across devices */
+      
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: lowercase;
+      
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+      
+      transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+                  background 0.2s ease;
+    }
+
+    /* Distinct Colors & Themes */
+    
+    /* 1. PPL - Ocean Blue */
+    .card-ppl {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
+      color: #dbeafe;
+    }
+    .card-ppl:hover, .card-ppl:active {
+      box-shadow: 0 10px 24px rgba(37, 99, 235, 0.4);
+    }
+
+    /* 2. CORE - Emerald Green */
+    .card-core {
+      background: linear-gradient(135deg, #064e3b 0%, #059669 100%);
+      color: #d1fae5;
+    }
+    .card-core:hover, .card-core:active {
+      box-shadow: 0 10px 24px rgba(5, 150, 105, 0.4);
+    }
+
+    /* 3. ONEPM - Sunset Amber/Orange */
+    .card-onepm {
+      background: linear-gradient(135deg, #7c2d12 0%, #ea580c 100%);
+      color: #ffedd5;
+    }
+    .card-onepm:hover, .card-onepm:active {
+      box-shadow: 0 10px 24px rgba(234, 88, 12, 0.4);
+    }
+
+    /* 4. ABS - Electric Purple */
+    .card-abs {
+      background: linear-gradient(135deg, #581c87 0%, #9333ea 100%);
+      color: #f3e8ff;
+    }
+    .card-abs:hover, .card-abs:active {
+      box-shadow: 0 10px 24px rgba(147, 51, 234, 0.4);
+    }
+
+    /* Mobile Feedback & Interactions */
+    .card:hover {
+      transform: translateY(-3px);
+    }
+
+    .card:active {
+      transform: scale(0.97); /* Press effect on mobile touch */
+    }
+
+    .card:focus-visible {
+      outline: 3px solid #ffffff;
+      outline-offset: 3px;
+    }
+
+    /* Mobile Optimizations */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .grid {
+        gap: 12px;
+      }
+
+      .card {
+        font-size: 18px;
+        border-radius: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Homepage</h1>
+
+  <main class="grid">
+    <a class="card card-ppl" href="https://mnichi.github.io/ppl/" target="_blank" rel="noopener noreferrer">
+      ppl
+    </a>
+
+    <a class="card card-core" href="https://mnichi.github.io/core/" target="_blank" rel="noopener noreferrer">
+      core
+    </a>
+
+    <a class="card card-onepm" href="https://mnichi.github.io/onepm/" target="_blank" rel="noopener noreferrer">
+      onepm
+    </a>
+
+    <a class="card card-abs" href="https://mnichi.github.io/abs/" target="_blank" rel="noopener noreferrer">
+      abs
+    </a>
+  </main>
+
+</body>
+</html>
